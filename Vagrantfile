@@ -67,6 +67,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
      sudo locale-gen nb_NO.UTF-8
      sudo apt-get update
+     
+  # Install python-pip | cheat
+     sudo apt-get python-pip
+     sudo python-pip cheat
 
   # Install java
      sudo apt-get install -y default-jdk
